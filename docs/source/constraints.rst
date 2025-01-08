@@ -2,6 +2,13 @@
 Constraints Functions
 #####################
 
+.. image:: https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86
+ :target: https://github.com/sponsors/dcajasn
+
+.. raw:: html
+   
+   <br>
+   
 .. raw:: html
 
     <a href='https://ko-fi.com/B0B833SXD' target='_blank'><img height='36'style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
@@ -11,8 +18,12 @@ related to the assets or assets class weights or related to the value of the sen
 of the portfolio to a specific risk factor. These functions transform all
 constraint to the form :math:`Aw \geq B`.
 
-Also this module have a function that help us to create relative and absolute views for the Black Litterman model. This views can consider relationships among assets and asset classes. This function transform all views to the form :math:`Pw = Q`.
+This module have a function that help us to create relative and absolute views for the Black
+Litterman model :cite:`e-BlackLitterman`. This views can consider relationships among assets and asset classes. This
+function transform all views to the form :math:`Pw = Q`.
 
+This module also have functions to create constraints based on graph information :cite:`e-Cajas10` :cite:`e-Cajas11`
+like the information obtained from networks and dendrograms.
 
 Module Functions
 ================
@@ -20,3 +31,11 @@ Module Functions
 .. automodule:: ConstraintsFunctions
    :members:
    :private-members:
+
+Bibliography
+============
+
+.. bibliography:: biblio.bib
+   :style: unsrt
+   :labelprefix: E
+   :keyprefix: e-

@@ -14,21 +14,22 @@ import os
 import sys
 import sphinx_rtd_theme
 
+import riskfolio as rp
+
 sys.path.insert(0, os.path.abspath('../..'))
 sys.path.insert(1, os.path.abspath('../../riskfolio'))
-
+sys.path.insert(2, os.path.abspath('../../riskfolio/src'))
+sys.path.insert(3, os.path.abspath('../../riskfolio/external'))
 
 # -- Project information -----------------------------------------------------
 
 project = 'Riskfolio-Lib'
-copyright = '2020-2022, Dany Cajas'
+copyright = '2020-2024, Dany Cajas'
 author = 'Dany Cajas'
 
-# The short X.Y version
-version = 'latest'
-# The full version, including alpha/beta/rc tags
-release = '3.1.1'
 
+# The short X.Y version
+release = '.'.join(rp.__version__.split('.')[:2])
 
 # -- General configuration ---------------------------------------------------
 
@@ -52,8 +53,10 @@ extensions = [
      'sphinx.ext.napoleon',
      'sphinxcontrib.bibtex',
      'sphinxemoji.sphinxemoji',
+     'sphinx_immaterial',
 ]
 
+autodoc_mock_imports = ["riskfolio.external.functions"]
 autodoc_member_order = 'bysource'
 autosummary_generate = True
 keep_warnings = False
@@ -80,7 +83,8 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+html_title = f"{project} {release}"
+html_theme = 'sphinx_immaterial'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -88,6 +92,30 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
 html_search_language = 'en'
+html_theme_options = {
+    "palette": {"scheme": "default"},
+    "icon": {"repo": "fontawesome/brands/github"},
+    "site_url": "https://riskfolio-lib.readthedocs.io/en/latest",
+    "repo_url": "https://github.com/dcajasn/Riskfolio-Lib",
+    "repo_name": "Riskfolio-Lib",
+    "globaltoc_collapse": True,
+    "toc_title": "Contents",
+    "toc_title_is_page_title": True,
+    "social": [
+        {
+            "icon": "fontawesome/brands/github",
+            "link": "https://github.com/dcajasn/Riskfolio-Lib",
+            "name": "Source on github.com",
+        },
+        {
+            "icon": "fontawesome/brands/python",
+            "link": "https://pypi.org/project/Riskfolio-Lib/",
+        },
+    ],}
+html_static_path = ["_static"]
+html_css_files = ["custom.css"]
+html_favicon = "_static/Riskfolio.ico"
+html_logo = "_static/Riskfolio.png"
 
 # -- Extension configuration -------------------------------------------------
 
@@ -106,8 +134,9 @@ intersphinx_mapping = {
     'scipy': ('https://docs.scipy.org/doc/scipy/reference/', None),
     'arch': ('https://bashtage.github.io/arch/', None),
     'xlsxwriter': ('https://xlsxwriter.readthedocs.io', None),
-    'networkx': ('https://networkx.org', None),
-    'astropy': ('https://www.astropy.org', None),
+    'networkx': ('https://networkx.org/documentation/stable/', None),
+    'astropy': ('https://docs.astropy.org/en/stable/', None),
+    'pybind11': ('https://pybind11.readthedocs.io/en/stable/',None),
 }
 
 # -- Options for todo extension ----------------------------------------------

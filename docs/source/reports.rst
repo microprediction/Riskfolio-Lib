@@ -9,7 +9,25 @@ Reports Functions
 
 .. raw:: html
 
+    <a href="https://www.kqzyfj.com/click-101359873-15150084?url=https%3A%2F%2Flink.springer.com%2Fbook%2F9783031843037" target="_blank">
+        <button style="padding:10px 20px; font-size:16px; background-color: #FFA500; color:white; border:none; border-radius:5px; cursor:pointer;">
+            Buy Advanced Portfolio Optimization Book on Springer
+        </button>
+    </a>
+    <br>
+    <br>
+
+.. image:: https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86
+ :target: https://github.com/sponsors/dcajasn
+
+.. raw:: html
+   
+    <br>
+   
+.. raw:: html
+
     <a href='https://ko-fi.com/B0B833SXD' target='_blank'><img height='36'style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
 
 This section explains some functions that allows us to create Jupyter Notebook and Excel reports that helps us to analyze quickly the properties of our portfolios.
 
@@ -58,7 +76,7 @@ Example
     method_mu='hist' # Method to estimate expected returns based on historical data.
     method_cov='hist' # Method to estimate covariance matrix based on historical data.
 
-    port.assets_stats(method_mu=method_mu, method_cov=method_cov, d=0.94)
+    port.assets_stats(method_mu=method_mu, method_cov=method_cov)
     
     # Estimate the portfolio that maximizes the risk adjusted return ratio
     w = port.optimization(model='Classic', rm=rm, obj='Sharpe', rf=0.0, l=0, hist=True)

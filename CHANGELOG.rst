@@ -4,7 +4,130 @@ Changelog
 
 .. raw:: html
 
+    <a href="https://www.kqzyfj.com/click-101359873-15150084?url=https%3A%2F%2Flink.springer.com%2Fbook%2F9783031843037" target="_blank">
+        <button style="padding:10px 20px; font-size:16px; background-color: #FFA500; color:white; border:none; border-radius:5px; cursor:pointer;">
+            Buy Advanced Portfolio Optimization Book on Springer
+        </button>
+    </a>
+    <br>
+    <br>
+
+.. image:: https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86
+ :target: https://github.com/sponsors/dcajasn
+
+.. raw:: html
+   
+    <br>
+   
+.. raw:: html
+
     <a href='https://ko-fi.com/B0B833SXD' target='_blank'><img height='36'style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+Version 7.0.0
+=============
+
+- Add two new convex risk measures: EVaR Range and RLVaR Range, to the Portfolio object.
+- Add three new risk measures: VaR Range, EVaR Range and RLVaR Range, to the HCPortfolio object.
+- Add the generalization of risk parity for variance through inequality constraints on the risk contributions of assets to the Portfolio object.
+- Add the generalization of factor risk parity for variance through inequality constraints on the risk contributions of risk factors to the Portfolio object.
+- Add a function to calculate the Brinson Performance Attribution per class and aggregate.
+- Add a plot function to show the Brinson Performance Attribution.
+- Add functions to calculate the VaR Range, EVaR Range and RLVaR Range.
+- Update plot functions to consider EVaR Range and RLVaR Range.
+- Update duplication, elimination and summation matrices functions to consider or not the diagonal of the symmetric matrix.
+
+
+Version 6.3.0
+=============
+
+- Add new functions to calculate the number of effective assets (NEA) and the average centrality of the portfolio.
+- Add the possibility to use neighborhood and cluster network constraints at the same time.
+- Fixed some bugs in HRP and HERC when we add constraints.
+- Fixed a bug in the duplication_summation_matrix.
+- Fixed tight layout in plot functions that uses multiple axes.
+
+Version 6.2.0
+=============
+
+- Improvement in calculation speed of duplication_matrix, duplication_elimination_matrix and duplication_summation_matrix functions using a vectorized formula.
+- Fixed formulation of risk parity with risk factors model that produced incorrect results when using the MOSEK solver.
+- Fixed some bugs in PlotFunctions module.
+- Fixed some bugs in HCPortfolio related to custom_mu vector and use of Kurtosis and Semi Kurtosis as risk measures.
+- Standardized the way additional parameters to estimate mean vector and covariance matrix are entered.
+
+Version 6.1.0
+=============
+
+- Implements standarized silhouette score to determine the optimal number of clusters.
+- Fix plot_clusters function to plot clusters and heatmap in same order of codependence matrix. Originally it plots the codependece matrix with axis x inverted.
+
+Version 6.0.0
+=============
+
+- Implements risk parity optimization based on explicit risk factors and principal components.
+- Implements new formulations of Gini Mean Difference, Tail Gini, Range, CVaR Range and Tail Gini Range that improves speed compared to formulations based on the owa portfolio model.
+- Improves the calculation of elliptical uncertainty sets for worst case optimization.
+- Add new functions that allow us to calculate the risk contribution per explicit risk factors and principal components.
+- Add new functions that allow us to plot the risk contribution per explicit risk factors and principal components.
+
+Version 5.0.0
+=============
+
+- Implements new kind of constraints that incorporates the information from networks like the Minimum Spanning Tree and Maximally Filtered Graph into the portfolio optimization models: return-risk portfolio, owa portfolio and worst case portfolio.
+- Implements new kind of constraints that incorporates the information from dendrograms  into the portfolio optimization models: return-risk portfolio, owa portfolio and worst case portfolio.
+- Improves the speed of several functions using the c++ linear algebra library Eigen and c++ eigenvalues library Spectra.
+- Add new functions that allow us to plot the relationship between graphs and asset allocation.
+- Add new functions that allow us to create constraints based on graphs information.
+- Add a new example about applications of networks and dendrograms constraints in portfolio optimization problems.
+- Fixed some errors related to HCPortfolio with constraints.
+- Fixed some errors in some plots.
+
+Version 4.4.0
+=============
+
+- Implements the approximate Kurtosis model through sum of squared quadratic forms for large scale kurtosis optimization.
+- Add the block vectorization operator.
+
+Version 4.3.0
+=============
+
+- Implements custom constraints for the Relaxed Risk Parity portfolio model.
+- Add three new methods to estimate the mean vector: James-Stein, Bayes-Stein and BOP.
+
+Version 4.2.0
+=============
+
+- Implements constraints for the Hierarchical Equal Risk Contribution (HERC) and Nested Clustered Optimization (NCO) portfolio models.
+- Add the option to show risk contributions as a percentage of total risk in risk contribution plot.
+- Repairs some bugs.
+
+Version 4.1.0
+=============
+
+- Implements the Relativistic Value at Risk and Relativistic Drawdown at Risk portfolio models.
+- Implements the Higher L-moments portfolio model function as an special case of OWA portfolio.
+- Adds functions to calculate L-moments.
+- Adds a function to calculate risk contribution constraints on asset classes.
+- Repairs some bugs.
+
+Version 4.0.0
+=============
+
+- Implements Kurtosis and Semi Kurtosis portfolio models based on parametric approach.
+- Implements new c++ based functions to speed up kurtosis model calculations.
+- Repairs some bugs.
+
+Version 3.3.0
+=============
+
+- Adds Kendall Tau and Gerber statistic as options for codependence matrix in HCPortfolio object.
+- Adds Gerber statistic as an option for covariance matrix estimator in Portfolio and HCPortfolio objects.
+
+Version 3.2.0
+=============
+
+- Implements reformulations of portfolio models based on drawdowns to speed up calculations.
+- Adds some tests for portfolio object and hcportfolio object.
 
 Version 3.1.0
 =============

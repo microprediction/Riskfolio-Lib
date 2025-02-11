@@ -1,0 +1,24 @@
+header.md-header{
+    background-color: orange;
+    color: #FFF; 
+}
+
+.md-text-color {
+    color: #666666; /* Custom primary font color */
+}
+
+.md-footer{
+    background: #666666;
+}
+
+@media only screen and (max-width: 75em){
+    .md-nav__source{
+        background-color: #996600;
+    }
+}
+@media only screen and (max-width: 75em){
+    .md-nav--primary .md-nav__title[for=__drawer]{
+        background-color: orange;
+        min-height: unset;
+    }
+}
